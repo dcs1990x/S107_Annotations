@@ -1,4 +1,4 @@
-package Level_1.Exercise_1;
+package Level_1.Exercise_2.model;
 
 public class OnSiteWorker extends Worker {
 
@@ -13,10 +13,15 @@ public class OnSiteWorker extends Worker {
         return (this.getHourlySalary() * hours) + GAS_COST;
     }
 
+    @SuppressWarnings("deprecation")
+    public void meetForCoffee(){
+        System.out.println("Let's grab a coffee and kill some time ;)");
+    }
+
     @Override
     public String toString(){
         return "Name: " + this.getName() + " " + this.getSurname() + "\n" +
                 "Hourly Salary: " + this.getHourlySalary() + " €\n" +
-                "Level_1.Exercise_1.Worker Type: " + this.getClass();
+                "Level_1.Exercise_1.model.Worker Type: " + this.getClass();
     }
 }

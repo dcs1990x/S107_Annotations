@@ -1,6 +1,6 @@
-package Level_1.Exercise_1;
+package Level_1.Exercise_2.model;
 
-public class Worker {
+public abstract class Worker {
 
     private String name;
     private String surname;
@@ -25,9 +25,7 @@ public class Worker {
         return this.hourlySalary;
     }
 
-    public double calculateSalary(int hours){
-        return this.getHourlySalary() * hours;
-    }
+    public abstract double calculateSalary(int hours);
 
     @Override
     public String toString(){

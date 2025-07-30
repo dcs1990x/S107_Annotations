@@ -1,4 +1,4 @@
-package Level_1.Exercise_1;
+package Level_1.Exercise_2.model;
 
 public class OnlineWorker extends Worker {
 
@@ -13,10 +13,15 @@ public class OnlineWorker extends Worker {
         return (this.getHourlySalary() * hours) + FLAT_RATE;
     }
 
+    @SuppressWarnings("deprecation")
+    public void callToNeverendingMeeting(){
+        System.out.println("Let's chit chat about nothing important ;)");
+    }
+
     @Override
     public String toString(){
         return "Name: " + this.getName() + " " + this.getSurname() + "\n" +
                 "Hourly Salary: " + this.getHourlySalary() + " €\n" +
-                "Level_1.Exercise_1.Worker Type: " + this.getClass();
+                "Level_1.Exercise_1.model.Worker Type: " + this.getClass();
     }
 }
