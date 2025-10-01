@@ -17,6 +17,6 @@ public class OnSiteWorker extends Worker {
     public String toString(){
         return "Name: " + this.getName() + " " + this.getSurname() + "\n" +
                 "Hourly Salary: " + this.getHourlySalary() + " €\n" +
-                "Level_1.Exercise_1.model.Worker Type: " + this.getClass();
+                "Worker Type: " + this.getClass();
     }
 }

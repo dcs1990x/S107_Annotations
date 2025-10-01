@@ -13,8 +13,14 @@ public class OnSiteWorker extends Worker {
         return (this.getHourlySalary() * hours) + GAS_COST;
     }
 
-    @SuppressWarnings("deprecation")
+    @Deprecated
+    @SuppressWarnings("all")
+    public void banOfficeCoffee(){
+        System.out.println("There is no coffee in this office. ");
+    }
+
     public void meetForCoffee(){
+        banOfficeCoffee();
         System.out.println("Let's grab a coffee and kill some time ;)");
     }
 
@@ -22,6 +28,6 @@ public class OnSiteWorker extends Worker {
     public String toString(){
         return "Name: " + this.getName() + " " + this.getSurname() + "\n" +
                 "Hourly Salary: " + this.getHourlySalary() + " €\n" +
-                "Level_1.Exercise_1.model.Worker Type: " + this.getClass();
+                "Worker Type: " + this.getClass().getSimpleName().replace("Worker", "");
     }
 }

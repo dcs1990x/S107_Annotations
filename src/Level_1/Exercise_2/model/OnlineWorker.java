@@ -13,8 +13,13 @@ public class OnlineWorker extends Worker {
         return (this.getHourlySalary() * hours) + FLAT_RATE;
     }
 
-    @SuppressWarnings("deprecation")
-    public void callToNeverendingMeeting(){
+    @Deprecated
+    @SuppressWarnings("all")
+    public void skipMeeting(){
+        System.out.println("Sorry, I have another meeting at that time... ");
+    }
+
+    public void callToNeverEndingMeeting(){
         System.out.println("Let's chit chat about nothing important ;)");
     }
 
@@ -22,6 +27,6 @@ public class OnlineWorker extends Worker {
     public String toString(){
         return "Name: " + this.getName() + " " + this.getSurname() + "\n" +
                 "Hourly Salary: " + this.getHourlySalary() + " €\n" +
-                "Level_1.Exercise_1.model.Worker Type: " + this.getClass();
+                "Worker Type: " + this.getClass().getSimpleName().replace("Worker", "");
     }
 }
