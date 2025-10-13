@@ -14,7 +14,6 @@ public class OnSiteWorker extends Worker {
     }
 
     @Deprecated
-    @SuppressWarnings("all")
     public void banOfficeCoffee(){
         System.out.println("There is no coffee in this office. ");
     }
